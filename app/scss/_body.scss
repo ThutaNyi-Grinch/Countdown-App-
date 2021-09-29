@@ -1,0 +1,225 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: $Very_dark_blue;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: $font-size;
+  text-transform: uppercase;
+  overflow: hidden;
+  background-image: url(../../images/bg-stars.svg);
+  &::after {
+    content: "";
+    width: 100%;
+    height: 167px;
+    position: absolute;
+    background-image: url(../../images/pattern-hills.svg);
+    background-size: cover;
+    background-position: 81% 10%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    z-index: -1;
+    @include breakPoint-Up(large) {
+      height: 200px;
+    }
+  }
+}
+.container {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .text {
+    color: $White;
+    letter-spacing: 8px;
+    width: 328px;
+    text-align: center;
+    margin-bottom: 50px;
+    flex: 0.5;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include breakPoint-Up(large) {
+      font-size: $lg-font-size;
+      letter-spacing: 10px;
+      width: 688px;
+      text-align: center;
+      margin-bottom: 110px;
+    }
+  }
+  & .countdown {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    &_main {
+      display: flex;
+      margin-bottom: 16px;
+      & > div {
+        width: 70px;
+        height: 66px;
+        border-radius: 3px;
+        margin-right: 16px;
+        position: relative;
+        color: $Soft_red;
+        font-size: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include breakPoint-Up(large) {
+          width: 148px;
+          height: 140px;
+          margin-right: 32px;
+          font-size: 60px;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        & > div {
+          width: 70px;
+          height: 100%;
+          max-height: 33px;
+          border-radius: 3px;
+          text-align: center;
+          @include breakPoint-Up(large) {
+            width: 148px;
+            max-height: 70px;
+          }
+        }
+        & .top {
+          position: relative;
+          overflow: hidden;
+          transform-style: preserve-3d;
+          transform-origin: bottom;
+          border: 1px solid $dark_blue;
+          & > div {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 21%);
+            @include breakPoint-Up(large) {
+              transform: translate(-50%, 38%);
+            }
+          }
+        }
+        & .bottom {
+          position: relative;
+          overflow: hidden;
+          border: 1px solid $Dark_desaturated_blue;
+          transform-style: preserve-3d;
+          transform-origin: top;
+          box-shadow: 0 4px 2px -2px $dark_blue;
+          & > div {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        & .card {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          max-height: 33px;
+          transform-style: preserve-3d;
+          transform-origin: bottom;
+          top: 0;
+          @include breakPoint-Up(large) {
+            width: 148px;
+            max-height: 70px;
+          }
+          & .card-face {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            backface-visibility: hidden;
+            border-radius: 3px;
+          }
+          &-face-front {
+            align-items: flex-end;
+            border: 1px solid $Dark_desaturated_blue;
+            //box-shadow: 0 4px 2px -2px $Very_dark_blue;
+            transform: rotateX(-180deg);
+            & > div {
+              transform: rotateX(0) translateY(-21%);
+              @include breakPoint-Up(large) {
+                transform: translateY(-38%);
+              }
+            }
+          }
+          &-face-back {
+            align-items: flex-start;
+            border: 1px solid $dark_blue;
+            & > div {
+              transform: translateY(21%);
+              @include breakPoint-Up(large) {
+                transform: translateY(38%);
+              }
+            }
+          }
+        }
+      }
+    }
+    &_text {
+      color: $Grayish_blue;
+      font-size: $xsm-font-size;
+      letter-spacing: 2px;
+      display: flex;
+      & > div {
+        width: 70px;
+        text-align: center;
+        margin-right: 16px;
+        &:last-child {
+          margin-right: 0;
+        }
+        @include breakPoint-Up(large) {
+          width: 148px;
+          margin-right: 32px;
+        }
+      }
+      @include breakPoint-Up(large) {
+        font-size: $sm-font-size;
+        letter-spacing: 7px;
+      }
+    }
+  }
+  & .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.2;
+    & > a {
+      display: block;
+      margin-right: 32px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @include breakPoint-Up(large) {
+      flex: 0.3;
+    }
+  }
+}
+.darkblue {
+  background: $dark_blue;
+}
+.Darkdesaturatedblue {
+  background: $Dark_desaturated_blue;
+}
+.flip {
+  transition: transform box-shadow;
+  transform: rotateX(-180deg);
+}

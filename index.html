@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor| Thuta Nyi | Launch countdown timer</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="app/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">We're launching soon</div>
+      <div class="countdown">
+        <div class="countdown_main">
+          <div class="box">
+            <div class="top darkblue"><div class="day"></div></div>
+            <div class="bottom Darkdesaturatedblue">
+              <div class="day"></div>
+            </div>
+            <div id="card" class="card Darkdesaturatedblue">
+              <div class="card-face card-face-front Darkdesaturatedblue">
+                <div class="day"></div>
+              </div>
+              <div class="card-face OnTop card-face-back darkblue">
+                <div class="day"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="top darkblue"><div class="hour"></div></div>
+            <div class="bottom Darkdesaturatedblue">
+              <div class="hour"></div>
+            </div>
+            <div id="card" class="card Darkdesaturatedblue">
+              <div class="card-face card-face-front Darkdesaturatedblue">
+                <div class="hour"></div>
+              </div>
+              <div class="card-face OnTop card-face-back darkblue">
+                <div class="hour"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="top darkblue"><div class="minute"></div></div>
+            <div class="bottom Darkdesaturatedblue">
+              <div class="minute"></div>
+            </div>
+            <div id="card" class="card 2 Darkdesaturatedblue">
+              <div class="card-face card-face-front Darkdesaturatedblue">
+                <div class="minute"></div>
+              </div>
+              <div class="card-face OnTop card-face-back darkblue">
+                <div class="minute"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div id="top" class="top darkblue"><div class="second"></div></div>
+            <div id="bottom" class="bottom Darkdesaturatedblue">
+              <div class="second"></div>
+            </div>
+            <div id="card" class="card Darkdesaturatedblue">
+              <div class="card-face card-face-front Darkdesaturatedblue">
+                <div class="second"></div>
+              </div>
+              <div class="card-face OnTop card-face-back darkblue">
+                <div class="second"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="countdown_text">
+          <div class="">Days</div>
+          <div class="">Hours</div>
+          <div class="">Minutes</div>
+          <div class="">Seconds</div>
+        </div>
+      </div>
+      <div class="social">
+        <a href="#"><img src="images/icon-facebook.svg" alt="" /></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt="" /></a>
+        <a href="#"><img src="images/icon-instagram.svg" alt="" /></a>
+      </div>
+    </div>
+    <script src="app/js/main.js"></script>
+  </body>
+</html>
